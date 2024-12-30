@@ -9,7 +9,7 @@
     "test": "ng test",
     "deploy": "npm run save-master && npm run build-deploy && ngh --dir=dist/buttons",
     "save-master": "git add . && git commit -m \"Auto-save changes before deployment\" && git push origin master",
-    "build-deploy": "ng build --prod --base-href https://pincha1212.github.io/buttons/"
+    "build-deploy": "ng build --configuration production --base-href https://pincha1212.github.io/buttons/ && mv dist/buttons/browser/* dist/buttons/"
   },
   "private": true,
   "dependencies": {
