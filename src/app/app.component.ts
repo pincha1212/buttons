@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { BotonesComponent } from "./components/botones/botones.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [BotonesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'buttons';
 }
