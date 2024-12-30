@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "npm run save-master && npm run build-deploy && ngh --dir=dist/buttons",
+    "save-master": "git add . && git commit -m 'Auto-save changes before deployment' && git push origin master",
+    "build-deploy": "ng build --prod --base-href https://pincha1212.github.io/buttons/"
   },
   "private": true,
   "dependencies": {
